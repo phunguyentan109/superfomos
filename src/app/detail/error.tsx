@@ -23,7 +23,14 @@ export default function Error({
         <h1 className={inter.className} style={{ color: 'var(--purple)' }}>
           Something went wrong!
         </h1>
-        <StyledButton onClick={() => reset()}>Try again</StyledButton>
+        <StyledButton
+          onClick={() => {
+            reset()
+            window.location.reload()
+          }}
+        >
+          Try again
+        </StyledButton>
       </Container>
     </>
   )

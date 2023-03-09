@@ -97,7 +97,7 @@ export default function Home() {
           <Spin spinning={createSocial.loading}>
             <Row gutter={[18, 0]} style={{ marginBottom: 31 }}>
               <Col style={{ paddingTop: 32 }}>
-                <StyledFormItem name='title' marginBottom={28}>
+                <StyledFormItem name='title' $marginBottom={28}>
                   <Title width='485px' />
                 </StyledFormItem>
 
@@ -107,7 +107,7 @@ export default function Home() {
                   style={{ marginBottom: 28 }}
                 >
                   <Col>
-                    <StyledFormItem name='startDate' marginBottom={0}>
+                    <StyledFormItem name='startDate' $marginBottom={0}>
                       <DateForm
                         width='181px'
                         placeholder='Date'
@@ -118,7 +118,7 @@ export default function Home() {
                   </Col>
 
                   <Col>
-                    <StyledFormItem name='startTime' marginBottom={0}>
+                    <StyledFormItem name='startTime' $marginBottom={0}>
                       <TimeForm
                         width='180px'
                         placeholder='Time'
@@ -129,7 +129,7 @@ export default function Home() {
                   </Col>
                 </Row>
 
-                <StyledFormItem name='venue' marginBottom={12}>
+                <StyledFormItem name='venue' $marginBottom={12}>
                   <InputForm
                     width='454px'
                     icon={locationIcon}
@@ -161,7 +161,7 @@ export default function Home() {
               </Col>
 
               <Col>
-                <StyledFormItem name='banner' marginBottom={0}>
+                <StyledFormItem name='banner' $marginBottom={0}>
                   <Banner
                     imgs={createSocial.banners}
                     loading={createSocial.loadingBanner}
@@ -178,7 +178,7 @@ export default function Home() {
               Description
             </DescLabel>
             <StyledCard style={{ marginBottom: 32 }}>
-              <StyledFormItem name='description' marginBottom={0}>
+              <StyledFormItem name='description' $marginBottom={0}>
                 <StyledTextArea
                   bordered={false}
                   placeholder='Description of your event..'
@@ -195,7 +195,7 @@ export default function Home() {
               <StyledFormItem
                 name='isManualApprove'
                 valuePropName='checked'
-                marginBottom={24}
+                $marginBottom={24}
               >
                 <StyledCheckbox className={inter.className}>
                   I want to approve attendees
@@ -209,7 +209,7 @@ export default function Home() {
                 Privacy
               </p>
 
-              <StyledFormItem name='privacy' marginBottom={24}>
+              <StyledFormItem name='privacy' $marginBottom={24}>
                 <Radio.Group>
                   <StyledRadio className={inter.className} value='Public'>
                     Public
@@ -233,7 +233,7 @@ export default function Home() {
                 Pick tags for our curation engine to work its magin
               </p>
 
-              <StyledFormItem name='tags' marginBottom={0}>
+              <StyledFormItem name='tags' $marginBottom={0}>
                 <Tags />
               </StyledFormItem>
             </StyledSetting>
