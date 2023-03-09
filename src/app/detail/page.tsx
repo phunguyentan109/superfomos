@@ -1,12 +1,12 @@
 'use client'
 import dynamic from 'next/dynamic'
-import createSocialSlice from './slice'
+import socialDetailSlice from './slice'
 import { store } from '@/redux'
 
 const Page = dynamic(
   () =>
-    import('./home').then((mod) => {
-      store.injectReducer('createSocial', createSocialSlice)
+    import('./detail').then((mod) => {
+      store.injectReducer('socialDetail', socialDetailSlice)
 
       return mod.default
     }) as any,
