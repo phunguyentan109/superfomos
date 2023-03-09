@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import { Card, Checkbox, Form, Input, Radio } from 'antd'
 
 export const StyledFormItem = styled(Form.Item)<{ [key: string]: any }>`
-  margin-bottom: ${(props) => props.marginBottom || 0}px !important;
+  margin-bottom: ${(props) => props.$marginBottom || 0}px !important;
 `
 
 export const Container = styled.div`
