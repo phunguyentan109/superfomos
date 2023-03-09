@@ -9,7 +9,10 @@ export const store = configureStore({
   reducer: {},
   devTools: true,
   middleware: (getDefaultMiddleware) =>
-    getDefaultMiddleware({ thunk: false }).concat(sagaMiddleware),
+    getDefaultMiddleware({
+      thunk: false,
+      serializableCheck: { ignoredActionPaths: ['payload.cb'] },
+    }).concat(sagaMiddleware),
 }) as any
 
 function createReducer(asyncReducers: any) {
